@@ -1,0 +1,58 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tetris</title>
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <div class="main-container">
+        <div class="game-wrapper">
+            <div class="game-container">
+                <canvas id="tetris"></canvas>
+                <div id="pause-overlay" class="pause-overlay">
+                    <div class="pause-message">Paused</div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="left">Left</button>
+                <button id="right">Right</button>
+                <button id="rotate">Rotate</button>
+                <button id="down">Down</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="score-container">
+                <h2>Score</h2>
+                <div id="score">0</div>
+            </div>
+            <div class="level-container">
+                <h2>Level</h2>
+                <div id="level">1</div>
+            </div>
+            <div class="next-piece-container">
+                <h2>Next Piece</h2>
+                <div class="next-piece">
+                    <canvas id="next-piece-canvas"></canvas>
+                </div>
+            </div>
+            <div class="music-container">
+                <button id="mute-music-button">Mute Music</button>
+                <button id="mute-sfx-button">Mute SFX</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="game-over-modal" class="modal-overlay">
+        <div class="modal">
+            <h2>Game Over</h2>
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+    <audio id="background-music" src="https://archive.org/download/TetrisThemeMusic/Tetris.mp3" loop></audio>
+    <audio id="move-sound" src="audio/sfx_movement_footsteps1.mp3"></audio>
+    <audio id="rotate-sound" src="audio/sfx_sounds_button1.mp3"></audio>
+    <audio id="drop-sound" src="audio/sfx_exp_short_hard1.mp3"></audio>
+    <audio id="line-clear-sound" src="audio/sfx_coin_double1.mp3"></audio>
+    <audio id="game-over-sound" src="audio/sfx_sounds_negative1.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+ </html>
